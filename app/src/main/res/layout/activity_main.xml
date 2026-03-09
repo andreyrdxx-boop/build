@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A1A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- HEADER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#1A1A2E"
+            android:padding="16dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚡ PowerAdmin Pro"
+                android:textSize="24sp"
+                android:textColor="#00E5FF"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Huawei Nova Y72S Control Center"
+                android:textSize="12sp"
+                android:textColor="#7E8FA6"
+                android:gravity="center"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
+
+        <!-- ADMIN STATUS PANEL -->
+        <LinearLayout
+            android:id="@+id/adminStatusPanel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#3E2723"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚠️ Требуются права администратора"
+                android:textColor="#FF6D00"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnEnableAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🛡️ АКТИВИРОВАТЬ ПРАВА АДМИНИСТРАТОРА"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:background="#BF360C"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- STATS PANEL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#16213E"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tvBattery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔋 Батарея: --"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"/>
+
+            <ProgressBar
+                android:id="@+id/batteryProgress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:max="100"
+                android:progress="50"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvRamInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="💾 RAM: загрузка..."
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"/>
+
+            <ProgressBar
+                android:id="@+id/ramProgress"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:max="100"
+                android:progress="0"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvNetworkInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📶 WiFi: --  |  🔵 BT: --"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <!-- === РАЗДЕЛ: СИСТЕМА === -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚙️ УПРАВЛЕНИЕ СИСТЕМОЙ"
+            android:textColor="#00E5FF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- REBOOT BUTTON - MAIN FEATURE -->
+        <Button
+            android:id="@+id/btnReboot"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="🔄 ПЕРЕЗАГРУЗИТЬ ТЕЛЕФОН\n(Без потери данных)"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:background="#1565C0"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- LOCK SCREEN -->
+        <Button
+            android:id="@+id/btnLockScreen"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🔒 ЗАБЛОКИРОВАТЬ ЭКРАН"
+            android:textColor="#FFFFFF"
+            android:background="#4A148C"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- CLEAR RAM -->
+        <Button
+            android:id="@+id/btnClearRam"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🧹 ОЧИСТИТЬ RAM / КЭШ"
+            android:textColor="#FFFFFF"
+            android:background="#00695C"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- === РАЗДЕЛ: СВЯЗЬ === -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📡 УПРАВЛЕНИЕ СВЯЗЬЮ"
+            android:textColor="#00E5FF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- VPN -->
+        <Button
+            android:id="@+id/btnVpn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🟢 VPN: ВКЛЮЧИТЬ"
+            android:textColor="#FFFFFF"
+            android:background="#1B5E20"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- WiFi -->
+        <Button
+            android:id="@+id/btnWifi"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="📶 WiFi: ПЕРЕКЛЮЧИТЬ"
+            android:textColor="#FFFFFF"
+            android:background="#1565C0"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- BLUETOOTH -->
+        <Button
+            android:id="@+id/btnBluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🔵 BLUETOOTH: ПЕРЕКЛЮЧИТЬ"
+            android:textColor="#FFFFFF"
+            android:background="#0D47A1"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- === РАЗДЕЛ: ИНСТРУМЕНТЫ === -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔧 ИНСТРУМЕНТЫ"
+            android:textColor="#00E5FF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- FLASHLIGHT -->
+        <Button
+            android:id="@+id/btnFlashlight"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🔦 ФОНАРИК: ВКЛЮЧИТЬ/ВЫКЛ"
+            android:textColor="#FFFFFF"
+            android:background="#424242"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- ADB WiFi -->
+        <Button
+            android:id="@+id/btnAdbWifi"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🔧 ADB ПО WiFi"
+            android:textColor="#FFFFFF"
+            android:background="#37474F"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- DEVELOPER OPTIONS -->
+        <Button
+            android:id="@+id/btnDevOptions"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="⚙️ РЕЖИМ РАЗРАБОТЧИКА"
+            android:textColor="#FFFFFF"
+            android:background="#311B92"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- === РАЗДЕЛ: ИНФОРМАЦИЯ === -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ℹ️ ИНФОРМАЦИЯ"
+            android:textColor="#00E5FF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"/>
+
+        <!-- BATTERY INFO -->
+        <Button
+            android:id="@+id/btnBatteryInfo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🔋 ИНФОРМАЦИЯ ОБ АККУМУЛЯТОРЕ"
+            android:textColor="#FFFFFF"
+            android:background="#E65100"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- NETWORK INFO -->
+        <Button
+            android:id="@+id/btnNetworkInfo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="🌐 ИНФОРМАЦИЯ О СЕТИ"
+            android:textColor="#FFFFFF"
+            android:background="#006064"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- DEVICE INFO -->
+        <Button
+            android:id="@+id/btnDeviceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="📱 ИНФОРМАЦИЯ ОБ УСТРОЙСТВЕ"
+            android:textColor="#FFFFFF"
+            android:background="#1A237E"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- FOOTER -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PowerAdmin Pro v1.0 | Huawei Nova Y72S"
+            android:textColor="#37474F"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
