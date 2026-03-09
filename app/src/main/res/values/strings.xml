@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PowerAdmin Pro</string>
+    <string name="admin_description">PowerAdmin Pro требует права администратора для управления устройством: перезагрузка, блокировка экрана, управление безопасностью.</string>
+</resources>
